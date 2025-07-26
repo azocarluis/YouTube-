@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi App YouTube</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF0000"> 
+</head>
+<body>
+    <div class="search-container">
+        <form class="search-form" id="searchForm" action="https://www.youtube.com/results" method="get" target="_blank">
+            <input type="text" class="search-input" name="search_query" placeholder="Buscar en YouTube" onkeyup="toggleClearIcon()">
+            <i class="material-icons clear-icon-inside" onclick="clearSearchInput()">close</i>
+            <i class="material-icons search-icon-inside" id="searchIcon">search</i>
+            <button type="submit" class="hidden-submit-button"></button>
+        </form>
+    </div>
+
+    <div class="youtube-logo-container">
+        <div class="youtube-play-button">
+            <div class="light-rays ray1"></div>
+            <div class="light-rays ray2"></div>
+            <div class="light-rays ray3"></div>
+        </div>
+        <div class="youtube-text">YouTube</div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
